@@ -1,0 +1,17 @@
+.gif{
+  display: flex;
+  width: 20em;
+  flex-direction: column;
+  border: 1px solid white;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  transition: all 200ms;
+  text-decoration: none;
+  color: white;
+}
+.gif img{
+  object-fit: scale-down;
+}
+.gif:hover{
+  background-color: #28537F;
+}

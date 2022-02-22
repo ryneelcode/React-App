@@ -8,12 +8,11 @@ const Home = () => {
   const [path, pushLocation] = useLocation(); //eslint-disable-line
   const { gifs } = useGifs();
 
-  function handleOnSubmit(e) {
+  const handleOnSubmit = e => {
     e.preventDefault();
     pushLocation(`/search/${keyword}`);
   }
-
-  function handleSetKeyWord(e) {
+  const handleSetKeyWord = e => {
     setKeyword(e.target.value);
   }
 
@@ -23,7 +22,7 @@ const Home = () => {
       <form onSubmit={handleOnSubmit}>
         <input type="text" name="keyword" placeholder="Search here any gif..." onChange={handleSetKeyWord} />
       </form>
-
+      <h2>Tú ultima busqueda...</h2>
       <GifList gifs={gifs} />
     </div>
   )

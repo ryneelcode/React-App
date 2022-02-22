@@ -1,9 +1,14 @@
 import React from "react";
+import { useGifs } from "../../hooks/useGifs"
+import Gif from "../Gif/Gif";
 
 const DetailGif = ({ params }) => {
+  const { gifs } = useGifs();
+  const result = gifs.find(gif => gif.id === params.id)
   return (
-    <div className="detail-gif">
-      <h1>{params.id} esta es la id del componente</h1>
+    <div>
+      <h2>Pagina descripcion</h2>
+      <Gif {...result} />
     </div>
   )
 }
